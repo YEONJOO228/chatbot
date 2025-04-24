@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>부동산 챗봇</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+<body>
+  <h1 style="font-size:30px; color:#2e6bee">부동산 사기 예방 AI 상담</h1>
+  <h2 style="font-size:15px; color:rgb(15, 14, 14)">챗봇에게 부동산관련 질문을 해보세요.</h2>
+  <button2>새 대화 시작</button2>
+</body>
+    <div class="chat-container">
+        <!-- 채팅 메시지 표시 영역 -->
+        <div class="chat-window" id="chat-window"></div>
+    
+        <!-- 입력창 + 버튼 -->
+        <div class="input-area">
+          <input type="text" id="message-input" placeholder="메시지를 입력하세요..." />
+          <button onclick="sendMessage()">보내기</button>
+        </div>
+      </div>
+    
+      <script>
+        function sendMessage() {
+          const input = document.getElementById('message-input');
+          const chatWindow = document.getElementById('chat-window');
+          const message = input.value.trim();
+          if (!message) return;
+    
+          const userMsg = document.createElement('div');
+          userMsg.className = 'message user';
+          userMsg.innerText = message;
+          chatWindow.appendChild(userMsg);
+    
+          input.value = '';
+          chatWindow.scrollTop = chatWindow.scrollHeight;
+    
+          // 가짜 응답 예시
+          setTimeout(() => {
+            const botMsg = document.createElement('div');
+            botMsg.className = 'message bot';
+            botMsg.innerText = `GPT 응답 예시: "${message}"에 대한 답변입니다.`;
+            chatWindow.appendChild(botMsg);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+          }, 500);
+        }
+    
+        // 엔터 키로도 전송 가능하게
+        document.getElementById('message-input').addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') sendMessage();
+        });
+      </script>
+</body>
+</html>
+

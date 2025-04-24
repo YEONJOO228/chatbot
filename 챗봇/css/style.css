@@ -1,0 +1,133 @@
+h1{
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+h2{
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+button2{
+    width:200px;
+    height:40px;
+    background-color:#487dee;
+    border: none;
+    color:white;
+    box-shadow: 0 4px
+    16px rgba(0, 79, 255, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: absolute;
+    top:15%;
+    left:10%;
+    transform: translate(-50%, -50%);
+    display: flex;        
+    align-items: center;        
+    justify-content: center;    
+    padding: 10px 20px;
+    border: none;
+
+}
+button2:focus{
+    outline: 0;
+}
+
+button2:hover{
+    background-color:  rgba(0, 79, 255, 0.9);
+    cursor: pointer;
+    box-shadow: 0 2px
+    4px  rgba(0, 79, 255, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 채팅창 전체 틀 */
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+  }
+
+  /* 메시지 표시 영역 */
+  .chat-window {
+    flex: 1;
+    padding: 100px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .message {
+    max-width: 60%;
+    padding: 10px 14px;
+    border-radius: 20px;
+    margin: 10px 0;
+    clear: both;
+  }
+
+  .user {
+    background-color: #4f9ef7;
+    color: white;
+    float: right;
+    margin-right: 220px;
+  }
+
+  .bot {
+    background-color: #e0e0e0;
+    color: #333;
+    float: left;
+    margin-left: 250px;
+  }
+
+  /* 입력창 하단 고정 */
+  .input-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+
+  .input-area input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+  }
+
+  .input-area button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4f9ef7;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 200px;
+  }
+
+  .input-area button:hover {
+    background-color: #3a82d6;
+  }
